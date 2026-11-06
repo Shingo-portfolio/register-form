@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>顧客登録フォーム（見本）</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+<main class="page">
+  <p class="notice" id="notice"></p>
+
+  <section class="intro" aria-labelledby="introHeading">
+    <h1 id="introHeading" class="intro__heading"></h1>
+    <ul class="intro__list" id="introList"></ul>
+    <div class="intro__actions">
+      <button type="button" class="btn btn--primary" id="fillBtn"></button>
+      <button type="button" class="btn btn--ghost" id="resetBtn"></button>
+    </div>
+  </section>
+
+  <div class="card" id="card">
+    <div class="card__top">
+      <button type="button" class="btn btn--lang" id="langBtn"></button>
+    </div>
+
+    <div id="formView">
+      <h2 class="card__title" data-i18n="title"></h2>
+      <p class="card__company"><span data-i18n="companyLabel"></span>: <span id="companyName"></span></p>
+      <div class="error-band" id="errorBand" role="alert" tabindex="-1" hidden></div>
+
+      <form id="regForm" novalidate>
+        <fieldset class="box">
+          <legend class="box__title" data-i18n="section1Title"></legend>
+
+          <div class="field">
+            <label for="billingName"><span data-i18n="billingName"></span><span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="billingName" autocomplete="off" aria-describedby="billingNameHint">
+            <small class="hint" id="billingNameHint" data-i18n="billingNameHint"></small>
+          </div>
+
+          <div class="field">
+            <label for="tel-number"><span data-i18n="telephone"></span><span class="req" aria-hidden="true">*</span></label>
+            <div class="tel">
+              <div class="combo combo--dial" data-combo="tel" data-mode="dial"></div>
+              <input type="text" id="tel-number" inputmode="numeric" placeholder="1234567890" autocomplete="off">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email"><span data-i18n="emailAddress"></span><span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="email" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label for="paymentName" data-i18n="paymentRecipientName"></label>
+            <input type="text" id="paymentName" autocomplete="off" aria-describedby="paymentNameHint">
+            <small class="hint" id="paymentNameHint" data-i18n="paymentRecipientNameHint"></small>
+          </div>
+
+          <div class="field">
+            <label for="taxId" data-i18n="taxIdFull"></label>
+            <input type="text" id="taxId" autocomplete="off">
+          </div>
+
+          <div class="field">
+            <label for="addr1"><span data-i18n="addressLine1"></span><span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="addr1" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="addr2" data-i18n="addressLine2Hint"></label>
+            <input type="text" id="addr2" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="city" data-i18n="city"></label>
+            <input type="text" id="city" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="state" data-i18n="state"></label>
+            <input type="text" id="state" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="zip" data-i18n="zip"></label>
+            <input type="text" id="zip" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="country-input"><span data-i18n="country"></span><span class="req" aria-hidden="true">*</span></label>
+            <div class="combo" data-combo="country" data-mode="country"></div>
+          </div>
+
+          <fieldset class="radios">
+            <legend><span data-i18n="shippingQuestion"></span><span class="req" aria-hidden="true">*</span></legend>
+            <label class="radio"><input type="radio" name="shipChoice" value="proceed" id="shipProceed"><span data-i18n="proceedToRegister"></span></label>
+            <label class="radio"><input type="radio" name="shipChoice" value="same" id="shipSame" checked><span data-i18n="shipToSameAddress"></span></label>
+          </fieldset>
+        </fieldset>
+
+        <fieldset class="box" id="section2" hidden>
+          <legend class="box__title" data-i18n="section2Title"></legend>
+
+          <div class="field">
+            <label for="s-recipient"><span data-i18n="recipientName"></span><span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="s-recipient" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-tel-number" data-i18n="telephone"></label>
+            <div class="tel">
+              <div class="combo combo--dial" data-combo="s-tel" data-mode="dial"></div>
+              <input type="text" id="s-tel-number" inputmode="numeric" placeholder="1234567890" autocomplete="off">
+            </div>
+          </div>
+          <div class="field">
+            <label for="s-email" data-i18n="shippingEmail"></label>
+            <input type="text" id="s-email" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-taxId" data-i18n="taxIdFull"></label>
+            <input type="text" id="s-taxId" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-addr1"><span data-i18n="addressLine1"></span><span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="s-addr1" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-addr2" data-i18n="addressLine2"></label>
+            <input type="text" id="s-addr2" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-addr3" data-i18n="addressLine3"></label>
+            <input type="text" id="s-addr3" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-city" data-i18n="city"></label>
+            <input type="text" id="s-city" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-state" data-i18n="state"></label>
+            <input type="text" id="s-state" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-zip" data-i18n="zip"></label>
+            <input type="text" id="s-zip" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="s-country-input"><span data-i18n="country"></span><span class="req" aria-hidden="true">*</span></label>
+            <div class="combo" data-combo="s-country" data-mode="country"></div>
+          </div>
+        </fieldset>
+
+        <fieldset class="box box--contact">
+          <legend class="box__title" data-i18n="contactInfo"></legend>
+          <p class="hint hint--block" data-i18n="contactHint"></p>
+          <div class="field">
+            <label for="c-name" data-i18n="contactName"></label>
+            <input type="text" id="c-name" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="c-email" data-i18n="contactEmail"></label>
+            <input type="text" id="c-email" autocomplete="off">
+          </div>
+          <div class="field">
+            <label for="c-tel" data-i18n="contactTelephone"></label>
+            <input type="text" id="c-tel" autocomplete="off">
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn--primary btn--block" data-i18n="submit"></button>
+      </form>
+    </div>
+
+    <div id="doneView" class="done" hidden>
+      <h2 class="card__title" data-i18n="completeTitle"></h2>
+      <p data-i18n="completeMessage"></p>
+      <p class="done__note" id="doneNote"></p>
+      <button type="button" class="btn btn--ghost" id="doneResetBtn"></button>
+    </div>
+  </div>
+</main>
+<script src="js/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

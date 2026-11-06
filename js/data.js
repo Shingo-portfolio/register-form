@@ -1,0 +1,132 @@
+/* 画面の言葉と国の一覧。言葉はすべてここに置く。 */
+window.COUNTRIES = [
+  { code: "US", name: "United States", dial: "+1" },
+  { code: "CA", name: "Canada", dial: "+1" },
+  { code: "GB", name: "United Kingdom", dial: "+44" },
+  { code: "DE", name: "Germany", dial: "+49" },
+  { code: "FR", name: "France", dial: "+33" },
+  { code: "AU", name: "Australia", dial: "+61" },
+  { code: "SG", name: "Singapore", dial: "+65" },
+  { code: "JP", name: "Japan", dial: "+81" },
+  { code: "KR", name: "South Korea", dial: "+82" },
+  { code: "HK", name: "Hong Kong", dial: "+852" },
+  { code: "TW", name: "Taiwan", dial: "+886" },
+  { code: "MY", name: "Malaysia", dial: "+60" }
+];
+
+window.SAMPLE = {
+  billingName: "Aurora Trading",
+  telDial: "+1",
+  telNumber: "5551234567",
+  email: "billing@aurora.example.com",
+  addressLine1: "120 Harbor Street",
+  city: "Portland",
+  state: "OR",
+  zip: "97201",
+  country: "US"
+};
+
+window.COMPANY_NAME = "Aurora Trading";
+
+window.I18N = {
+  en: {
+    title: "Customer Registration",
+    companyLabel: "Company",
+    section1Title: "Section 1 - Billing Address Registration",
+    section2Title: "Section 2 - Shipping Address Registration",
+    billingName: "Billing Name",
+    billingNameHint: "Please enter store name for billing purposes",
+    telephone: "Telephone Number",
+    emailAddress: "Email Address",
+    paymentRecipientName: "Payment Account Name",
+    paymentRecipientNameHint: "Only if the payment sender name differs from the billing name",
+    taxIdFull: "Business Identification Number (EORI, TAX ID, TIN, ABN, etc.)",
+    addressLine1: "Address Line 1",
+    addressLine2Hint: "Address Line 2 (Apartment/Unit Details)",
+    addressLine2: "Address Line 2",
+    addressLine3: "Address Line 3",
+    city: "City",
+    state: "State / Province",
+    zip: "ZIP / Postal Code",
+    country: "Country",
+    shippingQuestion: "Do you need to register a shipping address?",
+    proceedToRegister: "Proceed to register.",
+    shipToSameAddress: "Ship to the same address.",
+    recipientName: "Recipient Name",
+    shippingEmail: "Email Address (optional)",
+    contactInfo: "Contact Person",
+    contactHint: "If you run the business alone, you can leave this blank. (Your billing name will be used as the contact.)",
+    contactName: "Contact Name",
+    contactEmail: "Email Address",
+    contactTelephone: "Phone Number",
+    submit: "Register",
+    completeTitle: "Registration Complete",
+    completeMessage: "Thank you for registering. Your information has been saved.",
+    billingNameRequired: "Billing Name is required",
+    telephoneRequired: "Telephone Number is required",
+    emailRequired: "Email Address is required",
+    addressLine1Required: "Address Line 1 is required",
+    countryRequired: "Country is required",
+    recipientNameRequired: "Recipient Name is required",
+    shippingAddressLine1Required: "Shipping Address Line 1 is required",
+    shippingCountryRequired: "Shipping Country is required",
+    langButton: "Japanese"
+  },
+  ja: {
+    title: "顧客情報登録",
+    companyLabel: "会社名",
+    section1Title: "セクション1 - 請求先住所登録",
+    section2Title: "セクション2 - 配送先住所登録",
+    billingName: "請求先名称",
+    billingNameHint: "請求用の店舗名を入力してください",
+    telephone: "電話番号",
+    emailAddress: "メールアドレス",
+    paymentRecipientName: "支払い名義",
+    paymentRecipientNameHint: "送金名義が請求先名と異なる場合のみ",
+    taxIdFull: "事業者番号（EORI, TAX ID, TIN, ABN 等）",
+    addressLine1: "住所1",
+    addressLine2Hint: "住所2（アパート・部屋番号等）",
+    addressLine2: "住所2",
+    addressLine3: "住所3",
+    city: "市区町村",
+    state: "都道府県",
+    zip: "郵便番号",
+    country: "国",
+    shippingQuestion: "配送先住所を登録しますか？",
+    proceedToRegister: "配送先住所を登録する",
+    shipToSameAddress: "請求先と同じ住所に配送する",
+    recipientName: "宛名",
+    shippingEmail: "メールアドレス（任意）",
+    contactInfo: "担当者（やり取りの窓口）",
+    contactHint: "お一人で運営の場合は空欄で結構です（ご自身が窓口として登録されます）",
+    contactName: "担当者名",
+    contactEmail: "メールアドレス",
+    contactTelephone: "電話番号",
+    submit: "登録する",
+    completeTitle: "登録完了",
+    completeMessage: "ご登録ありがとうございます。情報が保存されました。",
+    billingNameRequired: "請求先名称は必須です",
+    telephoneRequired: "電話番号は必須です",
+    emailRequired: "メールアドレスは必須です",
+    addressLine1Required: "住所1は必須です",
+    countryRequired: "国は必須です",
+    recipientNameRequired: "宛名は必須です",
+    shippingAddressLine1Required: "配送先住所1は必須です",
+    shippingCountryRequired: "配送先の国は必須です",
+    langButton: "English"
+  }
+};
+
+/* 画面の上の説明（言語を切り替えても日本語のまま） */
+window.INTRO = {
+  notice: "これは画面の見本です。入力した内容は保存せず、どこにも送りません。",
+  heading: "お客さんに送る登録フォームです",
+  lines: [
+    "お客さんは届いた住所を開き、請求先と配送先を自分で入れます",
+    "英語と日本語を切り替えられます",
+    "入れ漏れがあると、登録の前に知らせます"
+  ],
+  fill: "見本の値を入れる",
+  reset: "最初からもう一度",
+  doneNote: "見本なので、どこにも送っていません。"
+};

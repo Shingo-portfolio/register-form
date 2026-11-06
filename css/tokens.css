@@ -1,0 +1,50 @@
+:root {
+  --color-primary: #1f5fbf;
+  --color-primary-dark: #174a96;
+  --color-primary-soft: #eaf1fb;
+  --color-text: #1d2433;
+  --color-text-sub: #5b6577;
+  --color-bg: #f3f5f9;
+  --color-surface: #ffffff;
+  --color-border: #c9d0dc;
+  --color-border-soft: #e3e7ee;
+  --color-danger: #d92d20;
+  --color-danger-bg: #fdecea;
+  --color-notice-bg: #fff6d6;
+  --color-notice-border: #e0c25a;
+  --color-on-primary: #ffffff;
+  --color-on-danger: #ffffff;
+
+  --font-family: "Noto Sans JP", sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-weight-normal: 400;
+  --font-weight-bold: 700;
+  --line-height: 1.6;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-round: 50%;
+  --shadow-card: 0 0.125rem 0.75rem rgba(20, 30, 60, 0.12);
+  --shadow-list: 0 0.25rem 0.75rem rgba(20, 30, 60, 0.18);
+
+  --border-thin: 1px;
+  --border-thick: 3px;
+  --card-max-width: 600px;
+  --code-width: 140px;
+  --list-max-height: 14rem;
+  --control-height: 2.75rem;
+  --radio-size: 1.125rem;
+  --z-list: 10;
+  --focus-ring: 0 0 0 3px rgba(31, 95, 191, 0.35);
+}
